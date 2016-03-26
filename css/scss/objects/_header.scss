@@ -1,51 +1,82 @@
 .header {
-	background: $white;
-	padding: 0;
-	border-bottom: 1px solid #dbdbdb;
-	@extend .lc;
+  background: $white;
+  padding: 0;
+  border-bottom: 1px solid #dbdbdb;
+  @extend .lc;
+  @media all and (min-width: $bp-large-2) {
+    display: flex;
+    align-items: flex-start;
+    padding: $pad-double 0;
+  }
 }
 .logo-box {
   width: 100%;
+  padding: $pad;
   min-height: 10em;
   height: auto;
   background: url('../images/degondABA-logo.svg');
+  background-origin: content-box;
   background-repeat: no-repeat;
 }
 .logo {
-	float: left;
-	max-width: 100%;
-	margin: 0.4rem;
+  float: left;
+  max-width: 100%;
+  margin: 0.4rem;
 
-	@media all and (min-width: $bp-med) {
-		max-width: 9rem;
-	}
+  @media all and (min-width: $bp-med) {
+    max-width: 9rem;
+  }
+  @media all and (min-width: $bp-large-2) {
+    padding-left: $pad-double;
+  }
+}
+
+.header__action-items {
+  padding-top: $pad;
+  display: flex;
+  a {
+    &:nth-of-type(1) {
+      flex-grow: 1;
+      margin-right: 1px;
+    }
+    &:nth-of-type(2) {
+      flex-grow: 1;
+    }
+  }
+  @media all and (min-width: $bp-large-2) {
+    width: 60%;
+    padding-right: 1em;
+  }
 }
 
 .nav-toggle {
-	float: right;
-	display: block;
-	padding: 0.9rem 1rem 0.7rem;
-	font-size: 1.3rem;
-	line-height: 1;
-	border-left: 1px solid #dbdbdb;
+  float: right;
+  display: block;
+  padding: 0.9rem 1rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 0;
+  @media all and (min-width: $bp-large-2) {
+   display: none;
+  }
+  &:after {
+    padding-left: $pad-half;
+  }
 
-	@media all and (min-width: $bp-med) {
-		display: none;
-	}
-
-	@media all and (max-width: 17em) {
-		padding-left: 0.2rem;
-		padding-right: 0.2rem;
-	}
+  @media all and (max-width: 17em) {
+   padding-left: 0.2rem;
+   padding-right: 0.2rem;
+  }
 }
 
 .search-form {
-	overflow: hidden;
-	max-height: 0;
+  overflow: hidden;
+  max-height: 0;
 
-	@media all and (min-width: $bp-med) {
-		float: right;
-		max-height: none;
-		margin: 0.65em 0.5em 0 0;
-	}
+  @media all and (min-width: $bp-med) {
+   float: right;
+   max-height: none;
+   margin: 0.65em 0.5em 0 0;
+  }
 }

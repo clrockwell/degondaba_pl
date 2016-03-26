@@ -22,10 +22,11 @@
 }
 
 .btn-large {
-  padding: $pad-half;
-  text-transform: uppercase;
+  padding: $pad $pad-half;
   font-size: 1.4rem;
-  font-weight: normal;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
