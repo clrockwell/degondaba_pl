@@ -7,6 +7,12 @@
   background: $gray-medium;
 }
 .nav-list {
+  @media all and (min-width: $bp-large-2) {
+    display: flex;
+    // padding resetting .lc
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   ul {
     padding-left: $pad-and-half;
     border-bottom: 1px solid;
@@ -19,25 +25,65 @@
       }
     }
   }
+  li {
+    @media all and (min-width: $bp-large-2) {
+      flex: 1;
+      text-align: center;
+    }
+    //
+    // separating out menu hover functionality
+    //
+    @media all and (min-width: $bp-large-2) {
+      position: relative;
+      // reset the styles on ul
+      ul {
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        padding-left: 0;
+        border-bottom: none;
+        li {
+          border-left: none;
+          white-space: nowrap;
+          text-align: left;
+        }
+      }
+      &:hover {
+        background: $gray-dark;
+        ul {
+          display: block;
+          background: $gray-dark;
+          a:hover {
+            background: $gray-medium;
+          }
+        }
+      }
+    }
+  }
 
   a {
-   display: block;
-   padding: $pad;
-   &:hover, &:focus {
-    // negate default <a> hover state
-    border-bottom-width: 1px;
-   }
-   &:active, 
-   &:hover,
-    {
-     font-weight: 700;
-     background-color: $white; 
-   } 
-   &:focus {
-    outline: $black solid 2px;
-    // Resetting original border-bottom
-    border-bottom-width: 0;
-   }
+    display: block;
+    padding: $pad;
+    color: $purple;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:hover, &:focus {
+      // negate default <a> hover state
+      border-bottom-width: 1px;
+    }
+    &:active, 
+    &:hover {
+      background-color: $gray-dark; 
+    } 
+    &:focus {
+      outline: $black solid 2px;
+      // Resetting original border-bottom
+      border-bottom-width: 0;
+    }
+    @media all and (min-width: $bp-large-2) {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -46,6 +92,11 @@
   position: relative;
   ul {
     display: none;
+  }
+  button {
+    @media all and (min-width: $bp-large-2) {
+      display: none;
+    }
   }
 }
 .nav-js--has-children-open {
