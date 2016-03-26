@@ -659,6 +659,9 @@ td {
     .nav-list a {
       border-bottom: 0; } }
 
+.nav-js.nav-list {
+  display: none; }
+
 .nav-js--has-children {
   position: relative; }
   .nav-js--has-children ul {

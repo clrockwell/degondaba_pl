@@ -1,7 +1,6 @@
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
-
 .nav {
   clear: both;
   background: $gray-medium;
@@ -87,7 +86,9 @@
   }
 }
 
-.nav-js {}
+.nav-js.nav-list {
+  display: none;
+}
 .nav-js--has-children {
   position: relative;
   ul {

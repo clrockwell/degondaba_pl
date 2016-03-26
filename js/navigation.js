@@ -3009,6 +3009,16 @@
       .parent('li')
         .toggleClass('nav-js--has-children-open');
   });
+
+  // Listener for menu toggle
+  $('button.nav-toggle-menu').on('touchstart click', function() {
+    if ($main_navigation.is(':hidden')) {
+      $main_navigation.slideDown();
+    }
+    else {
+      $main_navigation.slideUp();
+    }
+  })
 })(jQuery)
 
 
