@@ -531,8 +531,7 @@ td {
 \*------------------------------------*/
 .header {
   background: #ffffff;
-  padding: 0;
-  border-bottom: 1px solid #dbdbdb; }
+  padding: 0; }
   @media all and (min-width: 66em) {
     .header {
       display: flex;

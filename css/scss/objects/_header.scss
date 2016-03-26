@@ -1,7 +1,6 @@
 .header {
   background: $white;
   padding: 0;
-  border-bottom: 1px solid #dbdbdb;
   @extend .lc;
   @media all and (min-width: $bp-large-2) {
     display: flex;
