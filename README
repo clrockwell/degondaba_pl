@@ -1,1 +1,10 @@
-After you generate Pattern Lab for the first time your source files will be placed here.
+Unless you're working on this project I doubt you will want to fork this.  You're probably looking for https://github.com/pattern-lab/patternlab-php.
+
+If you're still here:
+* Ask me for commit access
+* Install Pattern Lab: http://patternlab.io/docs/requirements.html
+* On your machine, navigate to the directory pattern lab is in (e.g. /path/to/patternlab)
+* run `rm -rf source`
+* run `git clone https://github.com/clrockwell79/degondaba_pl.git source`
+* Get to work!  You can compile with (assuming your in the pattern lab main folder `php core/builder.php -wr`
+* You can compile the sass with `sass --watch source/css/style.scss:source/css/style.css`
