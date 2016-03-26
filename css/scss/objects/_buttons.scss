@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn {
+  display: inline-block;
+  background: $purple;
+  color: $white;
+  line-height: 1;
+  font-weight: 400;
+  padding: $pad;
+  border: 0;
+  text-align: center;
+  
+  &:hover, &:focus {
+
+  }
+
+}
+
+.btn-small {
+  padding: $pad-half;
+}
+
+.btn-large {
+  padding: $pad-half;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+
+.text-btn {
+  font-style: italic;
+}
+
+.btn-arrow {
+  border: none; /* a reset for button element */
+  position: absolute;
+  right: 10%;
+  top: 0px;
+  padding: 0;
+  margin-top: $pad;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border-top: 3px solid #401760;
+  border-right: 3px solid #401760;
+  transform: rotate(45deg);
+}
+
+.btn-arrow--up {
+  transform: rotate(-45deg);
+}
+.btn-arrow--down {
+  transform: rotate(135deg);
+}
+.btn-arrow--left {
+  transform: rotate(-135deg);
+}

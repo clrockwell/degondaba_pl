@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+
+.nav {
+  clear: both;
+  background: $gray-medium;
+}
+.nav-list {
+  ul {
+    padding-left: $pad-and-half;
+    border-bottom: 1px solid;
+    li {
+      border-left: $space-half solid $purple;
+      &:last-of-type {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  a {
+   display: block;
+   padding: $pad;
+   &:hover, &:focus {
+    // negate default <a> hover state
+    border-bottom-width: 1px;
+   }
+   &:active, 
+   &:hover,
+    {
+     font-weight: 700;
+     background-color: $white; 
+   } 
+   &:focus {
+    outline: $black solid 2px;
+    // Resetting original border-bottom
+    border-bottom-width: 0;
+   }
+  }
+}
+
+.nav-js {}
+.nav-js--has-children {
+  position: relative;
+  ul {
+    display: none;
+  }
+}
+.nav-js--has-children-open {
+  ul {
+    display: block;
+  }
+}
