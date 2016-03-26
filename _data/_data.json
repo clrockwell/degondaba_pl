@@ -11,6 +11,10 @@
 			"src": "../../images/fpo_16x9.png",
 			"alt": "16x9 Image"
 		},
+    "landscape-2030x680": {
+      "src": "http://placeimg.com/2030/680/people",
+      "alt": "2030x680 Image"
+    },
 		"square": {
 			"src": "../../images/fpo_square.png",
 			"alt": "Square Thumbnail"
