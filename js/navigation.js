@@ -2999,7 +2999,7 @@
   $sub_children = $main_navigation.find('ul');
   $sub_children.parent('li').addClass('nav-js--has-children');
   // add a toggle element
-  $sub_children.before('<button class="nav-js__child-trigger btn-arrow"></button>');
+  $sub_children.before('<div class="nav-js__child-trigger"><button class="btn-arrow"></button></div>');
 
 
   // Listener for sub menus
@@ -3011,13 +3011,16 @@
   });
 
   // Listener for menu toggle
-  $('button.nav-toggle-menu').on('touchstart click', function() {
+  $('a.nav-toggle-menu').on('touchstart click', function(e) {
+    e.stopImmediatePropagation();
     if ($main_navigation.is(':hidden')) {
       $main_navigation.slideDown();
     }
     else {
       $main_navigation.slideUp();
     }
+    
+    return false;
   })
 })(jQuery)
 

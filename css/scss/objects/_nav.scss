@@ -6,25 +6,24 @@
   background: $gray-medium;
 }
 .nav-list {
+  padding: 0;
   @media all and (min-width: $bp-large-2) {
     display: flex;
     // padding resetting .lc
-    padding-top: 0;
-    padding-bottom: 0;
   }
   ul {
     padding-left: $pad-and-half;
     border-bottom: 1px solid;
-    li {
-      border-left: $space-half solid $purple;
-      &:last-of-type {
-        a {
-          border-bottom: none;
-        }
-      }
-    }
   }
   li {
+    li {
+      border-left: $space-half solid $purple;
+    }
+    &:last-of-type {
+      a {
+        border-bottom: none;
+      }
+    } 
     @media all and (min-width: $bp-large-2) {
       flex: 1;
       text-align: center;
@@ -87,14 +86,30 @@
 }
 
 .nav-js.nav-list {
-  display: none;
+  @media all and (max-width: $bp-large-2) {
+    display: none;
+  }
 }
 .nav-js--has-children {
   position: relative;
+  @extend .cf;
   ul {
     display: none;
   }
-  button {
+  .nav-js__child-trigger {
+    position: absolute;
+    top:0;right: 0;
+    width: 5rem;
+    height: 4.9rem; // @todo this is dumb
+    border-left: 1px solid;
+    @extend .cf;
+    .btn-arrow {
+      position: static;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-left: $pad-and-half;
+    }
     @media all and (min-width: $bp-large-2) {
       display: none;
     }
@@ -103,5 +118,11 @@
 .nav-js--has-children-open {
   ul {
     display: block;
+  }
+  .nav-js__child-trigger {
+    box-shadow: 1px 1px $gray-medium;
+  }
+  .btn-arrow {
+    @extend .btn-arrow--down;
   }
 }
