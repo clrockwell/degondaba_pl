@@ -10,9 +10,10 @@
   padding: $pad;
   border: 0;
   text-align: center;
-  
+  box-sizing: content-box;
+  transition: all .5s;
   &:hover, &:focus {
-
+    background: rgba($purple, .5);
   }
 
 }

@@ -151,7 +151,7 @@ header, footer, nav, section, article, hgroup, figure {
     display: none; } }
 
 body {
-  background: #ffffff;
+  background: #f0f0f0;
   font: 100%/1.5 "Source Sans Pro", "Helvetica", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #000000; }
@@ -530,7 +530,6 @@ td {
     $PAGE STRUCTURE
 \*------------------------------------*/
 .header {
-  background: #ffffff;
   padding: 0; }
   @media all and (min-width: 66em) {
     .header {
@@ -693,7 +692,9 @@ td {
     $MAIN CONTENT AREA
 \*------------------------------------*/
 [role=main] {
-  padding: 0.5em 0.5em 2em;
+  background: #ffffff;
+  border: 10px solid #ececec;
+  padding: 1em 1em 2em;
   overflow: hidden; }
 
 /*------------------------------------*\
@@ -871,7 +872,11 @@ td {
   font-weight: 400;
   padding: 1em;
   border: 0;
-  text-align: center; }
+  text-align: center;
+  box-sizing: content-box;
+  transition: all .5s; }
+  .btn:hover, .btn:focus {
+    background: rgba(64, 23, 96, 0.5); }
 
 .btn-small {
   padding: 0.5em; }
@@ -905,7 +910,7 @@ td {
 .btn-arrow--up:after {
   transform: rotate(-45deg); }
 
-.btn-arrow--down:after, .nav-js--has-children-open .btn-arrow:after {
+.btn-arrow--down:after {
   transform: rotate(135deg); }
 
 .btn-arrow--left:after {
@@ -1124,13 +1129,6 @@ td {
   .social-share li {
     float: left;
     margin-right: 0.5em; }
-  .social-share a {
-    background: #d1d1d1;
-    color: #ffffff;
-    display: block;
-    padding: 0.5em; }
-    .social-share a:hover {
-      background: #d8dede; }
 
 .comments li {
   margin-bottom: 1em; }
